@@ -38,27 +38,31 @@ To address this, we propose a **chronologically-aware learning framework** that 
 
 We introduce a hybrid loss combining classification and regression:
 
-[
-\mathcal{L}*{Hybrid} = \alpha \mathcal{L}*{CE} + (1-\alpha)\mathcal{L}_{MSE}
-]
+## 3.1 Hybrid Loss Function
 
-#### Cross-Entropy Loss
+We introduce a hybrid loss combining classification and regression:
 
-[
-\mathcal{L}_{CE} = -\log p_y
-]
+$$
+\mathcal{L}_{Hybrid} = \alpha \mathcal{L}_{CE} + (1 - \alpha)\mathcal{L}_{MSE}
+$$
 
-#### Expected Phase Index
+### Cross-Entropy Loss
 
-[
+$$
+\mathcal{L}_{CE} = -\log(p_y)
+$$
+
+### Expected Phase Index
+
+$$
 \mathbb{E}[\hat{y}] = \sum_{i=0}^{K-1} p_i \cdot i
-]
+$$
 
-#### Chronological Penalty (MSE)
+### Chronological Penalty (MSE)
 
-[
-\mathcal{L}_{MSE} = (\mathbb{E}[\hat{y}] - y)^2
-]
+$$
+\mathcal{L}_{MSE} = \left(\mathbb{E}[\hat{y}] - y\right)^2
+$$
 
 ### Intuition
 
