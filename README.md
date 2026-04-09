@@ -1,4 +1,4 @@
-# Chrono-Aware Embryo Phase Classification
+# Embryo Phase Classification
 ### A 16-Phase Ablation Study with Custom Hybrid Loss
 
 ---
